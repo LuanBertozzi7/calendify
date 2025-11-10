@@ -1,0 +1,146 @@
+/* Cascadia Code */
+@import url("https://fonts.googleapis.com/css2?family=Cascadia+Code:ital,wght@0,200..700;1,200..700&display=swap");
+
+*,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-style: normal;
+}
+
+:root {
+  /* Cores */
+  --primary-color: #0057b7;
+  --background-color: #ffffff;
+  --support: #e0e0e0;
+  --highlight-color: #ffd700;
+  --warning-color: #d32f2f;
+  /* Fontes e estilos */
+  --default-font: "Cascadia Code", sans-serif;
+  --default-font-color: #fff;
+  --default-font-weight: 400;
+}
+
+body {
+  background: radial-gradient(circle at center, #0f2027, #183c48, #0057b7);
+  font-family: var(--default-font);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh; /* Ocupa 100% da altura da tela */
+}
+
+.container {
+  display: flex;
+  width: 850px;
+  height: 500px;
+  border-radius: 15px;
+  overflow: hidden; /* corta bordas arredondadas */
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Lado esquerdo - boas vindas */
+.projectDescription-section {
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.85),
+    rgba(10, 30, 60, 0.85)
+  );
+  flex: 1; /* para ocupar metade do espaço */
+  color: var(--default-font-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+  backdrop-filter: blur(2px); /* leve desfoque pra efeito "glass" */
+}
+
+.projectDescription-section h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.projectDescription-section p {
+  max-width: 80%;
+  text-align: center;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.projectDescription-section button {
+  background: transparent;
+  border: 2px solid white;
+  color: var(--default-font-color);
+  padding: 10px 25px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s;
+}
+.projectDescription-section button:hover {
+  background: white;
+  color: var(--primary-color);
+}
+
+.register-section {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 0 15px 15px 0;
+  box-shadow: -10px 0 25px rgba(0, 0, 0, 0.3);
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.register-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 15px;
+}
+
+.register-section form {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.register-section input {
+  padding: 10px 15px;
+  border-radius: 30px;
+  border: 1px solid var(--support);
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+.register-section input:focus {
+  border-color: var(--primary-color);
+}
+
+.register-section button {
+  background: var(--primary-color);
+  color: var(--support);
+  border: none;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+.register-section button:hover {
+  background: #0097cc;
+}
+/* Responsividade */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 90%;
+    height: auto;
+  }
+  .projectDescription-section {
+    display: none; /* Esconder o lado esquerdo*/
+  }
+}
